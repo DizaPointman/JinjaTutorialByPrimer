@@ -6,8 +6,10 @@ max_score = 100
 test_name = "Python Challenge"
 students = [
     {"name": "Sandrine", "score": 100},
-    {"name": "Gergeley", "score": 69},
+    {"name": "Gergeley", "score": 87},
     {"name": "Frieda", "score": 92},
+    {"name": "Franz", "score": 69},
+    {"name": "Schmebulock", "score": 42},
 ]
 
 environment = Environment(loader=FileSystemLoader("templates/"))
