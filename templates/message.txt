@@ -4,6 +4,8 @@ Hello {{ name }}!
 
 {% if score > 80 %}
 I'm happy to inform you that you did very well on today's {{ test_name }}!
+{% elif score < 60 %}
+I'm sorry to inform you that you proved you're the worst student I ever had on today's {{ test_name }}!
 {% else %}
 I'm sorry to inform you that you did extremely pathetic on today's {{ test_name }}!
 {% endif %}

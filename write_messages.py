@@ -12,6 +12,8 @@ students = [
     {"name": "Schmebulock", "score": 42},
 ]
 
+# writing a mesage to every student, depending on grade
+
 environment = Environment(loader=FileSystemLoader("templates/"))
 template = environment.get_template("message.txt")
 
@@ -27,3 +29,17 @@ for student in students:
         message.write(content)
         print(f"... message to {filename}")
         
+# putting results into html table
+
+results_filename = "students_results.html"
+results_template = environment.get_template("results.html")
+# Using context as a name for the collection that stores the variables for a template is a convention
+context = {
+    "students": students,
+    "test_name": test_name,
+    "max_score": max_score
+}
+
+with open(results_filename, mode="w", encoding="utf-8") as results:
+    results.write(results_template.render(context))
+    print(f"... wrote {results_filename}")
