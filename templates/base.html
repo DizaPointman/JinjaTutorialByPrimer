@@ -3,13 +3,23 @@
 <!DOCTYPE html>
 <html lang="en">
 
+{# Note: The names of your content blocks must be unique inside each template. 
+  Otherwise, Jinja will get confused about which block to choose for replacements. 
+  Note that you also name your blocks. With the title argument, you allow a child 
+  template to replace the code between {% block title %} and {% endblock title %} with its own title block #}
+
   <head>
     <meta charset="utf-8">
-    <title>{{ title }}</title>
+    <title>{% block title %}{{ title }}{% endblock title %}</title>
   </head>
 
   <body>
+    <header>
+      {% include "_navigation.html" %}
+    </header>
+    {% block content %}
     <h1>Welcome to {{ title }}!</h1>
+    {% endblock content %}
   </body>
 
 </html>
