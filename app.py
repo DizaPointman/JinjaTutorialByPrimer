@@ -12,6 +12,7 @@ students = [
     {"name": "Frieda", "score": 92},
     {"name": "Franz", "score": 69},
     {"name": "Schmebulock", "score": 42},
+    {"name": "Schmebulock", "score": 21}
 ]
 
 @app.route("/")

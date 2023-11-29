@@ -7,6 +7,6 @@ meant to be included, you can prefix its name with an underscore (_).#}
 
 <nav>
     {% for menu_item in ["home", "results"] %}
-    <a href="{{ url_for(menu_item) }}">{{ menu_item }}</a>
+    <a href="{{ url_for(menu_item) }}">{{ menu_item|upper }}</a>
     {% endfor %}
 </nav>
