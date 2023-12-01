@@ -1,0 +1,5 @@
+{
+    "python.terminal.activateEnvInCurrentTerminal": true,
+    "emmet.includeLanguages": {"jinja-html": "html"},
+    "files.associations": {"*.html": "jinja-html"}
+}

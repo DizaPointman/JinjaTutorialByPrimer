@@ -1,0 +1,13 @@
+{# templates/_navigation.html #}
+
+{# Instead of adding the navigation menu code directly into base.html, you can leverage the {% include %} tag. 
+By referencing another template with {% include %}, you’re loading the whole template into that position.
+Included templates are partials that contain a fraction of the full HTML code. To indicate that a template is 
+meant to be included, you can prefix its name with an underscore (_).#}
+
+<nav>
+    {% for menu_item in ["home", "results"] %}
+    {# <a href="{{ url_for(menu_item) }}">{{ menu_item|upper }}</a> #}
+        {{ macros.nav_link(menu_item) }}
+    {% endfor %}
+</nav>
